@@ -87,25 +87,32 @@ $(document).ready(function() {
 function sendEmail(){
     Email.send({
         SecureToken : "5ee740eb-f8c0-4b6c-b90d-e3da5240c068",
-        To : 'jokkerjo007@gmail.com',
-        From : "nicleonic2.0@gmail.com",
+        To : 'jeannotkamabu@gmail.com',
+        From : 'nicleonic2.0@gmail.com',
         Subject : "NTI Site Message",
-        Body : `Nom : ${document.getElementById("userName").value}<br> Email : ${document.getElementById("userMessage").value}<br> Contact : ${document.getElementById("userNumber").value}<br> Message : ${document.getElementById("userMessage").value}`
+        Body : `
+        Nom : ${document.getElementById("userName").value} <br> 
+        Email : ${document.getElementById("userMail").value} <br> 
+        Contact : ${document.getElementById("userNumber").value} <br> 
+        Message : ${document.getElementById("userMessage").value}`
     }).then(
-        () => alert("Message sent successfully <br> ")
+        () => alert("Message sent successfully <br> Message envoyé avec succès")
     );
+
 }
 
 
-function mailSender(){
-    var params ={
-        name : document.getElementById("userName").value,
-        email : document.getElementById("userMail").value,
-        message : document.getElementById("userMessage").value,
-    };
 
-    const serviceID = "service_loouxw6";
-    const templateID = "template_ht2p3qy";
+
+// function mailSender(){
+//     var params ={
+//         name : document.getElementById("userName").value,
+//         email : document.getElementById("userMail").value,
+//         message : document.getElementById("userMessage").value,
+//     };
+
+//     const serviceID = "service_loouxw6";
+//     const templateID = "template_ht2p3qy";
 
     // emailjs.send("service_loouxw6","template_ht2p3qy",{
     //     name: "heyTTT",
@@ -113,11 +120,11 @@ function mailSender(){
     //     message: "Hey Jo",
     // });
 
-    emailjs.send(serviceID,templateID,params).then((res)=>{
+    // emailjs.send(serviceID,templateID,params).then((res)=>{
     // document.getElementById("userName").value = "";
     // document.getElementById("userMail").value = "";
     // document.getElementById("userMessage").value = "";
-    console.log(res);
-    alert("Success");
-    }).catch((err)=> console.log(err));
-}
+//     console.log(res);
+//     alert("Success");
+//     }).catch((err)=> console.log(err));
+// }

@@ -387,6 +387,84 @@ section{
 .menu .box{
     cursor: pointer;
 }
+
+
+
+.produit .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.produit .box-container .box{
+    background-color: var(--verbose);
+    max-height: 40rem;
+    min-height: 36rem;
+    overflow: hidden;
+    padding: 3rem 2rem ;
+    text-align: center;
+    border: var(--border);
+    transition: .3s all ease-in-out;
+}
+.produit .box-container .box h3{
+    border: 1px solid black;
+
+    border-top: 0px ;
+    padding: 0 2rem;
+    overflow: hidden;
+
+}
+.produit .box-container:hover > .box h3{
+    border: 1px solid var(--verbose);
+}
+.produit .box-container .box img{
+    border: 1px solid black;
+    height: 20rem;
+    width: 100%;
+
+}
+.produit .box-container .box .btn{
+    color: #fff;
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    font-size: 1.7rem;
+    background: var(--verbose);
+    transition: all .3s ease-in-out;
+}
+.produit .box-container .box h3{
+    color: black;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+.produit .box-container .box .price{
+    color: var(--verbose);
+    font-size: 2.5rem;
+    padding: .5rem 0;
+}
+.produit .box-container .box .price span{
+    color: var(--verbose);
+    font-size: 1.5rem;
+    padding: .5rem 0;
+    text-decoration: line-through;
+} 
+.produit .box-container .box:hover{
+    background: var(--bl);
+}
+.produit .box-container .box:hover > *{
+    color: #fff;
+}
+.produit .box{
+    cursor: pointer;
+}
+
+.menu{
+    background: url(../images/backgroundsection.jpg)no-repeat;
+    background-size: cover;
+    
+}
+
 /* Our products */
 .products{
     background: url(../images/bac3.jpg)no-repeat;
